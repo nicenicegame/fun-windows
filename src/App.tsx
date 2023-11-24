@@ -8,7 +8,7 @@ function App() {
   })
 
   useEffect(() => {
-    const fetchUserMedia = async () => {
+    const initWebcam = async () => {
       const stream = await navigator.mediaDevices.getUserMedia({
         video: true,
         audio: false
@@ -20,7 +20,7 @@ function App() {
         videoRef.current.play()
       }
     }
-    fetchUserMedia()
+    initWebcam()
   }, [])
 
   useEffect(() => {
